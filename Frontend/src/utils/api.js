@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3002';
+const baseURL = 'https://course-project-1-75dw.onrender.com';
 
 // Обработка ответа
 const handleResponse = async (response) => {
