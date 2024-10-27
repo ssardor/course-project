@@ -3,12 +3,12 @@ import { createTemplate } from '../utils/api';
 
 function CreateTemplatePage() {
   const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const [content, setDescription] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await createTemplate({ title, description });
+      await createTemplate({ title, content });
       setTitle('');
       setDescription('');
       alert('Template created successfully!');
@@ -35,7 +35,7 @@ function CreateTemplatePage() {
           <label className="form-label">Description</label>
           <textarea
             className="form-control"
-            value={description}
+            value={content}
             onChange={(e) => setDescription(e.target.value)}
             required
           />

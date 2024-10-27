@@ -15,9 +15,7 @@ function Header({ isAuthenticated, onLogout, user }) {
           <ul className="navbar-nav">
             {isAuthenticated ? (
               <>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/create-form">{t('createForm')}</Link>
-                </li>
+                
                 <li className="nav-item">
                   <Link className="nav-link" to="/create-template">Create Template</Link>
                 </li>
@@ -27,8 +25,8 @@ function Header({ isAuthenticated, onLogout, user }) {
                 <li className="nav-item">
                   <button className="nav-link btn btn-link" onClick={onLogout}>{t('logout')}</button>
                 </li>
-                <li className="nav-item">
-                  <span className="navbar-text">{user.username}</span>
+                <li className="nav-item mx-4">
+                   {user.username}
                 </li>
               </>
             ) : (

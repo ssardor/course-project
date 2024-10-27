@@ -47,7 +47,7 @@ export const editProfile = async (userData) => {
 
 // Получение шаблонов
 export const fetchTemplates = async () => {
-  const response = await fetch(`${baseURL}/templates`);
+  const response = await fetch(`${baseURL}/api/templates`);
   return handleResponse(response);
 };
 
@@ -69,7 +69,7 @@ export const createForm = async (formData, token) => {
 
 // Создание шаблона
 export const createTemplate = async (templateData, token) => {
-  const response = await fetch(`${baseURL}/templates`, {
+  const response = await fetch(`${baseURL}/api/templates`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ export const createTemplate = async (templateData, token) => {
 
 // Обновление шаблона
 export const updateTemplate = async (id, templateData) => {
-  const response = await fetch(`${baseURL}/templates/${id}`, {
+  const response = await fetch(`${baseURL}/api/templates/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -104,7 +104,74 @@ export const deleteTemplate = async (id) => {
 
 // Поиск шаблонов
 export const searchTemplates = async (query, filter) => {
-  const response = await fetch(`${baseURL}/templates/search?query=${query}&filter=${filter}`);
+  const response = await fetch(`${baseURL}/api/templates/search?query=${query}&filter=${filter}`);
+  return handleResponse(response);
+};
+
+// Получение комментариев
+export const fetchComments = async (templateId) => {
+  const response = await fetch(`${baseURL}/api/comments/${templateId}`);
+  return handleResponse(response);
+};
+
+// Добавление комментария
+export const postComment = async (commentData,templateId) => {
+  const response = await fetch(`${baseURL}/api/comments`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(commentData,templateId),
+  });
+  return handleResponse(response);
+};
+
+// Удаление комментария
+export const deleteComment = async (commentId) => {
+  const response = await fetch(`${baseURL}/api/comments/${commentId}`, {
+    method: 'DELETE',
+  });
+  return handleResponse(response);
+};
+
+// Добавление вопроса
+export const addQuestion = async (questionData) => {
+  const response = await fetch(`${baseURL}/api/questions`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(questionData),
+  });
+  return handleResponse(response);
+};
+
+// Перестановка вопросов
+export const reorderQuestions = async (reorderData) => {
+  const response = await fetch(`${baseURL}/questions/reorder`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(reorderData),
+  });
+  return handleResponse(response);
+};
+
+// Лайк шаблона
+export const likeTemplate = async (templateId,user) => {
+  const response = await fetch(`${baseURL}/api/likes/${templateId}/like`, {
+    method: 'POST',
+    body:JSON.stringify(templateId)
+  });
+  return handleResponse(response);
+};
+
+// Удаление лайка
+export const unlikeTemplate = async (templateId,user) => {
+  const response = await fetch(`${baseURL}/api/likes/${templateId}/unlike`, {
+    method: 'DELETE',
+  });
   return handleResponse(response);
 };
 
@@ -131,72 +198,6 @@ export const updateForm = async (id, formData) => {
 // Удаление формы
 export const deleteForm = async (id) => {
   const response = await fetch(`${baseURL}/forms/${id}`, {
-    method: 'DELETE',
-  });
-  return handleResponse(response);
-};
-
-// Получение комментариев
-export const fetchComments = async (templateId) => {
-  const response = await fetch(`${baseURL}/comments/${templateId}`);
-  return handleResponse(response);
-};
-
-// Добавление комментария
-export const postComment = async (commentData) => {
-  const response = await fetch(`${baseURL}/comments`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(commentData),
-  });
-  return handleResponse(response);
-};
-
-// Удаление комментария
-export const deleteComment = async (commentId) => {
-  const response = await fetch(`${baseURL}/comments/${commentId}`, {
-    method: 'DELETE',
-  });
-  return handleResponse(response);
-};
-
-// Добавление вопроса
-export const addQuestion = async (questionData) => {
-  const response = await fetch(`${baseURL}/questions`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(questionData),
-  });
-  return handleResponse(response);
-};
-
-// Перестановка вопросов
-export const reorderQuestions = async (reorderData) => {
-  const response = await fetch(`${baseURL}/questions/reorder`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(reorderData),
-  });
-  return handleResponse(response);
-};
-
-// Лайк шаблона
-export const likeTemplate = async (templateId) => {
-  const response = await fetch(`${baseURL}/likes/${templateId}/like`, {
-    method: 'POST',
-  });
-  return handleResponse(response);
-};
-
-// Удаление лайка
-export const unlikeTemplate = async (templateId) => {
-  const response = await fetch(`${baseURL}/likes/${templateId}/unlike`, {
     method: 'DELETE',
   });
   return handleResponse(response);

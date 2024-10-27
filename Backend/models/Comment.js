@@ -7,7 +7,7 @@ class Comment {
   }
 
   static async add(comment) {
-    const [result] = await pool.query('INSERT INTO comments (content, templateId, userId) VALUES (?, ?, ?)', [comment.content, comment.templateId, comment.userId]);
+    const [result] = await pool.query('INSERT INTO comments (content, templateId) VALUES (?, ?, ?)', [comment.content, comment.templateId, comment.userId]);
     return result.insertId;
   }
 

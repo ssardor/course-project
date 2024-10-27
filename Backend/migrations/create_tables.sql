@@ -1,4 +1,4 @@
-CREATE TABLE Users (
+CREATE TABLE users_new (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255),
   email VARCHAR(255) UNIQUE,
@@ -6,16 +6,15 @@ CREATE TABLE Users (
   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Templates (
+CREATE TABLE templates (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(255),
   description TEXT,
-  isPublic BOOLEAN DEFAULT false,
   userId INT,
   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Questions (
+CREATE TABLE questions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   content TEXT,
   templateId INT,
@@ -23,7 +22,7 @@ CREATE TABLE Questions (
   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Comments (
+CREATE TABLE comments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   content TEXT,
   userId INT,
@@ -31,7 +30,7 @@ CREATE TABLE Comments (
   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Likes (
+CREATE TABLE likes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   userId INT,
   templateId INT,

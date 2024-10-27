@@ -13,7 +13,7 @@ function LikeButton({ templateId }) {
   };
 
   return (
-    <button onClick={handleLike}>
+    <button className='btn btn-danger' onClick={handleLike}>
       {liked ? 'Unlike' : 'Like'}
     </button>
   );

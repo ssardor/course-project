@@ -5,7 +5,7 @@ exports.addComment = async (req, res) => {
   const { content } = req.body;
   const { templateId } = req.params;
   try {
-    const commentId = await Comment.add({ content, templateId, userId: req.user.id });
+    const commentId = await Comment.add({ content, templateId});
     res.status(201).json({ id: commentId });
   } catch (error) {
     res.status(400).json({ error: 'Adding comment failed' });

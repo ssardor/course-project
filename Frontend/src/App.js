@@ -35,14 +35,13 @@ function App() {
     setIsAuthenticated(false);
     setUser(null);
   };
-
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <Router>
         <Header isAuthenticated={isAuthenticated} onLogout={handleLogout} user={user} />
         <div className="container mt-4">
           <Routes>
-            <Route path="/" element={<HomePage isAuthenticated={isAuthenticated} />} />
+            <Route path="/" element={<HomePage isAuthenticated={isAuthenticated} user={user}/>} />
             <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
             <Route path="/register" element={<RegisterPage onRegister={handleLogin} />} />
             <Route path="/templates/:id" element={<TemplatePage />} />

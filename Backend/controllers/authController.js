@@ -8,7 +8,7 @@ async function testConnection() {
     console.error('Ошибка подключения к базе данных:', error);
   }
 }
-
+testConnection()
 
 const registerUser = async (req, res) => {
   const { username, password } = req.body;
@@ -40,13 +40,4 @@ const loginUser = async (req, res) => {
 module.exports = { registerUser, loginUser };
 const pool = require('../config/db');
 
-async function testConnection() {
-  try {
-    const [rows] = await pool.query('SELECT NOW()');
-    console.log('Connection successful:', rows[0]);
-  } catch (err) {
-    console.error('Connection error:', err);
-  }
-}
 
-testConnection();
