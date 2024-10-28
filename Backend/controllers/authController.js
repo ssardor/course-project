@@ -1,15 +1,5 @@
 const User = require('../models/User');
 
-// async function testConnection() {
-//   try {
-//     const [rows, fields] = await pool.query('SELECT 1');
-//     console.log('Подключение к базе данных успешно');
-//   } catch (error) {
-//     console.error('Ошибка подключения к базе данных:', error);
-//   }
-// }
-// testConnection()
-
 const registerUser = async (req, res) => {
   const { username, password } = req.body;
   try {

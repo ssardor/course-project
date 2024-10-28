@@ -2418,3 +2418,18 @@
 {"level":"info","message":"::ffff:127.0.0.1 - - [28/Oct/2024:11:26:43 +0000] \"GET /register HTTP/1.1\" 404 147 \"-\" \"got (https://github.com/sindresorhus/got)\""}
 {"level":"info","message":"::ffff:127.0.0.1 - - [28/Oct/2024:11:26:43 +0000] \"GET /register HTTP/1.1\" 404 147 \"-\" \"got (https://github.com/sindresorhus/got)\""}
 {"level":"info","message":"Server is running on port 3002"}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:27:57 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Oct/2024:11:28:01 +0000] \"GET /register HTTP/1.1\" 404 147 \"-\" \"got (https://github.com/sindresorhus/got)\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:10 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:11 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:11 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:11 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:12 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:12 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:12 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:12 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:13 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:13 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"::1 - - [28/Oct/2024:11:28:14 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\""}
+{"level":"info","message":"Server is running on port 3002"}
+{"level":"info","message":"Server is running on port 3002"}
