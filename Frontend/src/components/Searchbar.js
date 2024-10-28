@@ -1,26 +1,35 @@
 import React, { useState } from 'react';
+import { searchTemplates } from '../utils/api';
 
-function SearchBar({ onSearch }) {
+function Searchbar() {
   const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
 
-  const handleSearch = () => {
-    onSearch(query);
+  const handleSearch = async () => {
+    try {
+      const response = await searchTemplates(query);
+      setResults(response);
+    } catch (error) {
+      console.error('Search failed:', error);
+    }
   };
 
   return (
-    <div className="input-group mb-3">
+    <div>
       <input
         type="text"
-        className="form-control"
-        placeholder="Search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search templates"
       />
-      <button className="btn btn-outline-secondary" onClick={handleSearch}>
-        Search
-      </button>
+      <button onClick={handleSearch}>Search</button>
+      <ul>
+        {results.map(template => (
+          <li key={template.id}>{template.title}</li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default SearchBar;
+export default Searchbar;

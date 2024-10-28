@@ -13,6 +13,8 @@ class Like {
     const [rows] = await pool.query('SELECT * FROM likes WHERE templateId = ?', [templateId]);
     return rows.length;
   }
+
+
 }
 
 module.exports = Like;

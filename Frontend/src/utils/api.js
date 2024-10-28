@@ -103,10 +103,12 @@ export const deleteTemplate = async (id) => {
 };
 
 // Поиск шаблонов
-export const searchTemplates = async (query, filter) => {
-  const response = await fetch(`${baseURL}/api/templates/search?query=${query}&filter=${filter}`);
+export const searchTemplates = async (query) => {
+  const response = await fetch(`${baseURL}/api/templates/search?query=${query}`);
   return handleResponse(response);
 };
+
+
 
 // Получение комментариев
 export const fetchComments = async (templateId) => {
@@ -174,7 +176,10 @@ export const unlikeTemplate = async (templateId,user) => {
   });
   return handleResponse(response);
 };
-
+export const getLikesCount = async (templateId) => {
+  const response = await fetch(`${baseURL}/api/likes/${templateId}/count`);
+  return handleResponse(response);
+};
 // Получение форм
 export const fetchForms = async () => {
   const response = await fetch(`${baseURL}/forms`);

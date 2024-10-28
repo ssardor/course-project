@@ -20,3 +20,12 @@ exports.unlikeTemplate = async (req, res) => {
     res.status(500).json({ error: 'Failed to unlike template' });
   }
 };
+exports.getLikesCount = async (req, res) => {
+  const { templateId } = req.params;
+  try {
+    const count = await Like.getLikesByTemplateId(templateId);
+    res.status(200).json({ count });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to get likes count' });
+  }
+};

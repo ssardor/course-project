@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TemplateList from "../components/TemplateList";
+import { useTranslation } from "react-i18next";
 
 function HomePage({ isAuthenticated, user }) {
+  const { t } = useTranslation();
+
   return (
     <div className="container">
-      <h1 className="text-center my-4">Welcome to the Form Builder</h1>
+      <h1 className="text-center my-4">{t('welcome')}</h1>
       <div className="d-flex justify-content-center mb-4">
         {isAuthenticated && (
           <>

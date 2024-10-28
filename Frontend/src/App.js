@@ -16,6 +16,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import { lightTheme, darkTheme } from "./themes/themes";
 import "./App.css";
 import CreateTemplatePage from "./pages/CreateTemplatePage";
+import Searchbar from "./components/Searchbar";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -62,7 +63,7 @@ function App() {
                 <ProfilePage user={user} />
               </PrivateRoute>
             } />
-            <Route path="/search-forms" element={<SearchFormsPage />} />
+            <Route path="/search-forms" element={<Searchbar />} />
           </Routes>
         </div>
         <Footer />

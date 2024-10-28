@@ -52,4 +52,5 @@ const searchTemplates = async (req, res) => {
   }
 };
 
+
 module.exports = { getTemplates, createTemplate, updateTemplate, deleteTemplate, searchTemplates };

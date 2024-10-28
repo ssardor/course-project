@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { fetchTemplates } from '../utils/api';
 import CommentSection from './CommentSection';
 import LikeButton from './LikeButton';
+import { useTranslation } from 'react-i18next';
 
 function TemplateDetail({ match }) {
+  const { t } = useTranslation();
   const [template, setTemplate] = useState(null);
 
   useEffect(() => {
@@ -12,7 +14,7 @@ function TemplateDetail({ match }) {
     });
   }, [match.params.id]);
 
-  if (!template) return <div>Loading...</div>;
+  if (!template) return <div>{t('loading')}</div>;
 
   return (
     <div>
